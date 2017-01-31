@@ -136,7 +136,7 @@ let easeInOutQuint = function (t, b, c, d) {
 
 
 let easeInSine = function (t, b, c, d) {
-	return -c * let cos(t/d * (let PI/2)) + c + b;
+	return -c * Math.cos(t/d * (Math.PI/2)) + c + b;
 };
 
 
@@ -145,7 +145,7 @@ let easeInSine = function (t, b, c, d) {
 
 
 let easeOutSine = function (t, b, c, d) {
-	return c * let sin(t/d * (let PI/2)) + b;
+	return c * Math.sin(t/d * (Math.PI/2)) + b;
 };
 
 
@@ -154,7 +154,7 @@ let easeOutSine = function (t, b, c, d) {
 
 
 let easeInOutSine = function (t, b, c, d) {
-	return -c/2 * (let cos(let PI*t/d) - 1) + b;
+	return -c/2 * (Math.cos(Math.PI*t/d) - 1) + b;
 };
 
 
@@ -163,7 +163,7 @@ let easeInOutSine = function (t, b, c, d) {
 
 
 let easeInExpo = function (t, b, c, d) {
-	return c * let pow( 2, 10 * (t/d - 1) ) + b;
+	return c * Math.pow( 2, 10 * (t/d - 1) ) + b;
 };
 
 
@@ -172,7 +172,7 @@ let easeInExpo = function (t, b, c, d) {
 
 
 let easeOutExpo = function (t, b, c, d) {
-	return c * ( -let pow( 2, -10 * t/d ) + 1 ) + b;
+	return c * ( -Math.pow( 2, -10 * t/d ) + 1 ) + b;
 };
 
 
@@ -182,9 +182,9 @@ let easeOutExpo = function (t, b, c, d) {
 
 let easeInOutExpo = function (t, b, c, d) {
 	t /= d/2;
-	if (t < 1) return c/2 * let pow( 2, 10 * (t - 1) ) + b;
+	if (t < 1) return c/2 * Math.pow( 2, 10 * (t - 1) ) + b;
 	t--;
-	return c/2 * ( -let pow( 2, -10 * t) + 2 ) + b;
+	return c/2 * ( -Math.pow( 2, -10 * t) + 2 ) + b;
 };
 
 
@@ -193,7 +193,7 @@ let easeInOutExpo = function (t, b, c, d) {
 
 let easeInCirc = function (t, b, c, d) {
 	t /= d;
-	return -c * (let sqrt(1 - t*t) - 1) + b;
+	return -c * (Math.sqrt(1 - t*t) - 1) + b;
 };
 
 
@@ -204,7 +204,7 @@ let easeInCirc = function (t, b, c, d) {
 let easeOutCirc = function (t, b, c, d) {
 	t /= d;
 	t--;
-	return c * let sqrt(1 - t*t) + b;
+	return c * Math.sqrt(1 - t*t) + b;
 };
 
 
@@ -214,7 +214,7 @@ let easeOutCirc = function (t, b, c, d) {
 
 let easeInOutCirc = function (t, b, c, d) {
 	t /= d/2;
-	if (t < 1) return -c/2 * (let sqrt(1 - t*t) - 1) + b;
+	if (t < 1) return -c/2 * (Math.sqrt(1 - t*t) - 1) + b;
 	t -= 2;
-	return c/2 * (let sqrt(1 - t*t) + 1) + b;
+	return c/2 * (Math.sqrt(1 - t*t) + 1) + b;
 };

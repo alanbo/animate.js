@@ -29,9 +29,11 @@
 </div>
 
 <script src="../lib/index.js"></script>
+<script src="../lib/easings.js"></script>
+
 <script>
   var element = document.querySelector('.ball');
-  var animate = initAnimate();
+  var animate = initAnimate(easeInOutQuart);
 
   function run(value) {
     element.style.left = value + 'px';
