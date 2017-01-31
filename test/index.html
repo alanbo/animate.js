@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .stage {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .ball {
+      position: absolute;
+      top: 10vh;
+      left: 50px;
+      width: 40px;
+      height: 40px;
+      background-color: black;
+      border-radius: 50%;
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="stage">
+  <div class="ball">
+  </div>
+
+</div>
+
+<script src="../lib/index.js"></script>
+<script>
+  var element = document.querySelector('.ball');
+
+  function run(value) {
+    element.style.left = value + 'px';
+  }
+
+  function callback(value) {
+    console.log('finished at ', value);
+  }
+
+  animate(3000, 10, 1000, run, callback );
+</script>
+</body>
+</html>
