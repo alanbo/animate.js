@@ -1,0 +1,23 @@
+{
+  "name": "animate.js",
+  "description": "Simple animation function - lightweight replacement for jQuery.animate and Velocity.js with pluggable easing functions.",
+  "main": "lib/index.min.js",
+  "authors": [
+    "Alan Bogusiewicz"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "animation",
+    "velocity",
+    "requestanimationframe",
+    "easings"
+  ],
+  "homepage": "https://github.com/alanbo/animate.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
